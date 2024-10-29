@@ -1,8 +1,8 @@
 def pick_up_password(number):
     passwords = ""
     for i in range(1, first_number):
-        for j in range(1, first_number):
-            if first_number % (i + j) == 0 and i != j and not(is_dublicate(passwords, i, j)):
+        for j in range(i + 1, first_number):
+            if first_number % (i + j) == 0 and not(is_dublicate(passwords, i, j)):
                 passwords += str(i) + str(j)
     return passwords
 
